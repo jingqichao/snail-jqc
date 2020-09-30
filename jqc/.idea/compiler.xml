@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jqc" />
+        <module name="jqc-gateway" />
+        <module name="jqc-common" />
+        <module name="jqc-registry" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jqc-registry" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
