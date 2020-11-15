@@ -8,18 +8,10 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jqc.registry</groupId>
-    <artifactId>jqc-registry</artifactId>
+    <artifactId>jqc-service-api</artifactId>
+    <packaging>pom</packaging>
     <description>
-        微服务注册中心
+        所有微服务的API抽取比如javaBean或者Feign
     </description>
 
-    <!--依赖包-->
-    <!--这里使用的是Eureka注册中心-->
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
 </project>

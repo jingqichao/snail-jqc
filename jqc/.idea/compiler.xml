@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jqc-sharding-jdbc" />
-        <module name="jqc-gateway" />
         <module name="jqc-common" />
         <module name="jqc-registry" />
       </profile>
@@ -15,5 +14,12 @@
     <bytecodeTargetLevel>
       <module name="jqc-registry" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jqc" options="-parameters" />
+      <module name="jqc-common" options="-parameters" />
+      <module name="jqc-registry" options="-parameters" />
+    </option>
   </component>
 </project>
