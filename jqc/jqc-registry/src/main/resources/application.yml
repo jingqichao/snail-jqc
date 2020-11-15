@@ -1,0 +1,15 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: false #是否将自己注册到eureka中
+    fetch-registry: false #是否从eureka中获取信息
+    server-url:
+      defaultZone: http://${eureka.instance.hosthome}:${server.port}/eureka/
+spring:
+  application:
+    name: eureka
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
