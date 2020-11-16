@@ -1,0 +1,4 @@
+EurekaServer启动报错：Unsatisfied dependency expressed through field 'eurekaServerBootstrap'
+解决办法：
+https://blog.csdn.net/qq_41647999/article/details/93378711
+https://blog.csdn.net/weixin_42506093/article/details/86560531
