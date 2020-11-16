@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <!--不要配置版本号，否则会版本冲突，不写版本，它就会默认使用父模板的版本-->
         </dependency>
     </dependencies>
