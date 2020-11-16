@@ -75,6 +75,7 @@
         <module>jqc-service</module>
         <module>jqc-service-api</module>
         <module>jqc-web</module>
+        <module>jqc-common-db</module>
     </modules>
 
 <!--    <dependencyManagement>-->

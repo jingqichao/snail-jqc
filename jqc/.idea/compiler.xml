@@ -9,6 +9,7 @@
         <module name="jqc-sharding-jdbc" />
         <module name="jqc-common" />
         <module name="jqc-registry" />
+        <module name="jqc-common-db" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jqc" options="-parameters" />
       <module name="jqc-common" options="-parameters" />
+      <module name="jqc-common-db" options="-parameters" />
       <module name="jqc-registry" options="-parameters" />
       <module name="jqc-sharding-jdbc" options="-parameters" />
     </option>
