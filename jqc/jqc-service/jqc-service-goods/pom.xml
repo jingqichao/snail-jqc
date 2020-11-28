@@ -3,31 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jqc</artifactId>
+        <artifactId>jqc-service</artifactId>
         <groupId>com.jqc</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jqc-service-api</artifactId>
-    <packaging>pom</packaging>
-    <description>
-        所有微服务的API抽取比如javaBean或者Feign
-    </description>
-    <modules>
-        <module>jqc-service-goods-api</module>
-    </modules>
-
+    <artifactId>jqc-service-goods</artifactId>
+    <description>商品微服务工程-goods数据库的管理</description>
     <dependencies>
         <dependency>
-            <groupId>com.jqc.common</groupId>
-            <artifactId>jqc-common</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>com.jqc</groupId>
-            <artifactId>jqc-common-db</artifactId>
+            <artifactId>jqc-service-goods-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
-
     </dependencies>
+
+
 </project>
