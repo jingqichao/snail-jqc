@@ -1,7 +1,8 @@
 package com.jqc.good.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jqc.goods.entity.TbBrand;
+import com.jqc.goods.domain.entity.dao.BrandDo;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.jqc.goods.entity.TbBrand;
  * @author jqc
  * @since 2020-11-28
  */
-public interface TbBrandMapper extends BaseMapper<TbBrand> {
+@Mapper
+public interface BrandMapper extends BaseMapper<BrandDo> {
 
 }
