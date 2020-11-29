@@ -35,3 +35,5 @@ eureka:
 #  compancy.name: www.jqc.com
 #  bulid.artifactId: ${project.artifactId}
 #  bulid.version: ${project.version}
+swagger:
+  enabled: true

@@ -3,7 +3,9 @@ package com.jqc.goods.domain.entity.dao;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.Value;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.io.Serializable;
@@ -18,6 +20,7 @@ import java.io.Serializable;
  */
 @Data
 //@EqualsAndHashCode(callSuper = false)
+@TableName(value = "tb_brand")
 public class BrandDo implements Serializable {
 
     private static final long serialVersionUID = 1L;
