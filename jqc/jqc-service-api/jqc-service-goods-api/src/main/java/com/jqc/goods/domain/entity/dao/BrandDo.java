@@ -29,6 +29,8 @@ public class BrandDo implements Serializable {
      * TableId：
      *  value：指定主键列的列名，如果实体属性与列名一致，可以省略不指定
      *  type：指定主键策略
+     *
+     *  如何数据库字段是下划线（如：stu_name），转实体类驼峰式问题，默认设置为true了，自动识别
      */
     /**
      * 品牌id
