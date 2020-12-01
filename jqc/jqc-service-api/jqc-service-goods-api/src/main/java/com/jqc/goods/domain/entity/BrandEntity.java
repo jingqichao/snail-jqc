@@ -51,7 +51,9 @@ public class BrandEntity implements Serializable {
 
     /**
      * 品牌的首字母
+     * 查询时候不返回letter的值： @TableField(select = false)
      */
+    @TableField(select = false)
     private String letter;
 
     /**
