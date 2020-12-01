@@ -8,6 +8,7 @@
 package com.jqc.goods.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
@@ -38,7 +39,9 @@ public class BrandEntity implements Serializable {
 
     /**
      * 品牌名称
+     * 指定数据库的字段名：@TableField(value = "name")
      */
+    @TableField(value = "name")
     private String name;
 
     /**
@@ -55,4 +58,11 @@ public class BrandEntity implements Serializable {
      * 排序
      */
     private Integer seq;
+
+    /**
+     * 地址
+     * address在数据库不存在：@TableField(exist = false)
+     */
+    @TableField(exist = false)
+    private String address;
 }
