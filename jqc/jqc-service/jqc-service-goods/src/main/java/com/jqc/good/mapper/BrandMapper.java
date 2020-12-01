@@ -1,7 +1,7 @@
 package com.jqc.good.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jqc.goods.domain.entity.dao.BrandDo;
+import com.jqc.goods.domain.entity.BrandEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2020-11-28
  */
 @Mapper
-public interface BrandMapper extends BaseMapper<BrandDo> {
+public interface BrandMapper extends BaseMapper<BrandEntity> {
 
 }

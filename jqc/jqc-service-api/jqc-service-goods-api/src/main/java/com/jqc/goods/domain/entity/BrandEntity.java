@@ -1,27 +1,25 @@
-package com.jqc.goods.domain.entity.dao;
-
+/**
+ * Copyright (C), 2020-2020, 荆启超
+ * FileName: BrandEntity
+ * Author:   jqc
+ * Date:     2020/12/1 23:02
+ * Description: 品牌类实体属性
+ */
+package com.jqc.goods.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import lombok.Value;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.io.Serializable;
 
 /**
- * <p>
- * 品牌表
- * </p>
- *
- * @author jqc
- * @since 2020-11-28
+ * @Author jqc
+ * @Date 2020/12/1 23:02
+ * @Version 1.0
  */
 @Data
-//@EqualsAndHashCode(callSuper = false)
-@TableName(value = "tb_brand")
-public class BrandDo implements Serializable {
+public class BrandEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -57,6 +55,4 @@ public class BrandDo implements Serializable {
      * 排序
      */
     private Integer seq;
-
-
 }

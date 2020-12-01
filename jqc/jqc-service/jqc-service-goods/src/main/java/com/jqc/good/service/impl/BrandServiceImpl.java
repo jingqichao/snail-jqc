@@ -2,12 +2,9 @@ package com.jqc.good.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jqc.good.mapper.BrandMapper;
-import com.jqc.good.service.IBrandService;
-import com.jqc.goods.domain.entity.dao.BrandDo;
+import com.jqc.good.service.BrandService;
+import com.jqc.goods.domain.entity.BrandEntity;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * <p>
@@ -18,13 +15,6 @@ import java.util.List;
  * @since 2020-11-28
  */
 @Service
-public class BrandServiceImpl extends ServiceImpl<BrandMapper, BrandDo> implements IBrandService {
+public class BrandServiceImpl extends ServiceImpl<BrandMapper, BrandEntity> implements BrandService {
 
-    @Resource
-    private BrandMapper brandMapper;
-
-    @Override
-    public List<BrandDo> getBrandAll(BrandDo brandDo) {
-        return brandMapper.selectList(null);
-    }
 }
