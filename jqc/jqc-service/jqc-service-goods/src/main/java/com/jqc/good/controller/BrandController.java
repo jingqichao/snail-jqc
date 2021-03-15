@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,25 +29,31 @@ import java.util.List;
 @CrossOrigin
 public class BrandController {
 
-    @Resource
-    private BrandService brandService;
+    private final  BrandService brandService;
+
+    @Autowired
+    public BrandController(BrandService brandService) {
+        this.brandService = brandService;
+    }
 
     @RequestMapping(value = "/findAll",method = RequestMethod.POST)
     public Result<List<BrandVO>>findAll(){
-        List<BrandVO> brandVOList = new ArrayList<BrandVO>();
-        BrandVO brandVO = new BrandVO();
+        List<BrandVO> brandVOList = new ArrayList<>();
+
         List<BrandEntity> brands = brandService.findAll();
         for (BrandEntity brandEntity : brands){
-            brandVO.setAddress(brandEntity.getAddress());
-            brandVO.setId(brandEntity.getId());
-            brandVO.setImage(brandEntity.getImage());
-            brandVO.setLetter(brandEntity.getLetter());
-            brandVO.setName(brandEntity.getName());
-            brandVO.setSeq(brandEntity.getSeq());
+            BrandVO brandVO = new BrandVO(){{
+                setAddress(brandEntity.getAddress());
+                setId(brandEntity.getId());
+                setImage(brandEntity.getImage());
+                setLetter(brandEntity.getLetter());
+                setName(brandEntity.getName());
+                setSeq(brandEntity.getSeq());
+
+            }};
             brandVOList.add(brandVO);
         }
-
-        return new Result<List<BrandVO>>(true, StatusCode.OK,"",brandVOList);
+        return new Result<>(true, StatusCode.OK,"",brandVOList);
     }
 
 }

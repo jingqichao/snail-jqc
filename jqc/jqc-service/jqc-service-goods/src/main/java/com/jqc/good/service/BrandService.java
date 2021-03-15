@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C), 2020-2020, 荆启超
  * FileName: BrandService
  * Author:   jqc
@@ -19,5 +19,9 @@ import java.util.List;
  */
 public interface BrandService extends IService<BrandEntity> {
 
+    /**
+     *  查询所有品牌接口（无参）
+     * @return 品牌集合列表
+     */
     List<BrandEntity> findAll();
 }

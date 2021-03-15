@@ -4,11 +4,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jqc.good.mapper.BrandMapper;
 import com.jqc.good.service.BrandService;
 import com.jqc.goods.domain.entity.BrandEntity;
-import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,9 +20,18 @@ import java.util.List;
 @Service
 public class BrandServiceImpl extends ServiceImpl<BrandMapper, BrandEntity> implements BrandService {
 
-    @Resource
-    private BrandMapper brandMapper;
+    private final BrandMapper brandMapper;
 
+    @Autowired
+    public BrandServiceImpl(BrandMapper brandMapper) {
+        this.brandMapper = brandMapper;
+    }
+
+    /**
+     * 查询所有品牌接口（无参）
+     *
+     * @return 品牌集合列表
+     */
     @Override
     public List<BrandEntity> findAll() {
         return brandMapper.selectList(null);

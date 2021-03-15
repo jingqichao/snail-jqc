@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C), 2020-2020, 荆启超
  * FileName: SwaggerConfig
  * Author:   jqc
