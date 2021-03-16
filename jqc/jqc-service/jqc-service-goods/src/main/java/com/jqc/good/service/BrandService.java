@@ -7,8 +7,10 @@
  */
 package com.jqc.good.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.jqc.goods.domain.entity.BrandEntity;
+import com.jqc.goods.domain.vo.BrandVo;
 
 import java.util.List;
 
@@ -20,8 +22,16 @@ import java.util.List;
 public interface BrandService extends IService<BrandEntity> {
 
     /**
-     *  查询所有品牌接口（无参）
+     * 查询所有品牌接口
+     *
      * @return 品牌集合列表
      */
-    List<BrandEntity> findAll();
+    List<BrandVo> findAll();
+
+    /**
+     * 查询所有品牌接口freemarker格式
+     *
+     * @return JSONObject
+     */
+    JSONObject findAllByFreemarker();
 }

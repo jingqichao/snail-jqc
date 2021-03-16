@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C), 2020-2020, 荆启超
  * FileName: BrandEntity
  * Author:   jqc
@@ -20,7 +20,7 @@ import java.io.Serializable;
  * @Version 1.0
  */
 @Data
-public class BrandVO {
+public class BrandVo {
 
     /**
      * 品牌id

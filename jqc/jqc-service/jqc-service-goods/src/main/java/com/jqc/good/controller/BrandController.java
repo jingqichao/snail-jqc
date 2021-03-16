@@ -1,9 +1,10 @@
 package com.jqc.good.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.jqc.good.service.BrandService;
 import com.jqc.goods.domain.entity.BrandEntity;
-import com.jqc.goods.domain.vo.BrandVO;
+import com.jqc.goods.domain.vo.BrandVo;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,44 +17,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>
  * 品牌表 前端控制器
- * </p>
+ * 跨域问题 @CrossOrigin
  *
  * @author jqc
  * @since 2020-11-28
  */
 @RestController
 @RequestMapping("/brand")
-//跨域问题
 @CrossOrigin
 public class BrandController {
 
-    private final  BrandService brandService;
+    private final BrandService brandService;
 
     @Autowired
     public BrandController(BrandService brandService) {
         this.brandService = brandService;
     }
 
-    @RequestMapping(value = "/findAll",method = RequestMethod.POST)
-    public Result<List<BrandVO>>findAll(){
-        List<BrandVO> brandVOList = new ArrayList<>();
-
-        List<BrandEntity> brands = brandService.findAll();
-        for (BrandEntity brandEntity : brands){
-            BrandVO brandVO = new BrandVO(){{
-                setAddress(brandEntity.getAddress());
-                setId(brandEntity.getId());
-                setImage(brandEntity.getImage());
-                setLetter(brandEntity.getLetter());
-                setName(brandEntity.getName());
-                setSeq(brandEntity.getSeq());
-
-            }};
-            brandVOList.add(brandVO);
-        }
-        return new Result<>(true, StatusCode.OK,"",brandVOList);
+    /**
+     * 查询所有品牌接口
+     *
+     * @return Result<List < BrandVO>>
+     */
+    @RequestMapping(value = "/findAll", method = RequestMethod.POST)
+    public Result<List<BrandVo>> findAll() {
+        List<BrandVo> brandVoList = brandService.findAll();
+        return new Result<>(true, StatusCode.OK, "", brandVoList);
     }
+
+    /**
+     * 查询所有品牌接口freemarker格式
+     *
+     * @return JSONObject
+     */
+    @RequestMapping(value = "/findAll", method = RequestMethod.POST)
+    public Result<JSONObject> findAllByFreemarker() {
+        JSONObject jsonObject = brandService.findAllByFreemarker();
+        return new Result<>(true, StatusCode.OK, "", jsonObject);
+    }
+
 
 }
