@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.rmi.ServerException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class BrandController {
      * @return JSONObject
      */
     @RequestMapping(value = "/findAll", method = RequestMethod.POST)
-    public Result<JSONObject> findAllByFreemarker() {
+    public Result<JSONObject> findAllByFreemarker() throws ServerException {
         JSONObject jsonObject = brandService.findAllByFreemarker();
         return new Result<>(true, StatusCode.OK, "", jsonObject);
     }

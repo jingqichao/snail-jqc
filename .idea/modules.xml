@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc.iml" filepath="$PROJECT_DIR$/jqc/jqc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-common/jqc-common.iml" filepath="$PROJECT_DIR$/jqc/jqc-common/jqc-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-common-db/jqc-common-db.iml" filepath="$PROJECT_DIR$/jqc/jqc-common-db/jqc-common-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-gateway/jqc-gateway.iml" filepath="$PROJECT_DIR$/jqc/jqc-gateway/jqc-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-registry/jqc-registry.iml" filepath="$PROJECT_DIR$/jqc/jqc-registry/jqc-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-service/jqc-service.iml" filepath="$PROJECT_DIR$/jqc/jqc-service/jqc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-service-api/jqc-service-api.iml" filepath="$PROJECT_DIR$/jqc/jqc-service-api/jqc-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqc/jqc-sharding-jdbc/jqc-sharding-jdbc.iml" filepath="$PROJECT_DIR$/jqc/jqc-sharding-jdbc/jqc-sharding-jdbc.iml" />
+    </modules>
+  </component>
+</project>

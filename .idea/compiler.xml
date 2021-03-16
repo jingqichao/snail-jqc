@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="snail-jqc" />
+        <module name="jqc-common-db" />
+        <module name="jqc-registry" />
+        <module name="jqc-common" />
+        <module name="jqc-sharding-jdbc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jqc" target="1.8" />
+      <module name="jqc-common" target="1.8" />
+      <module name="jqc-common-db" target="1.8" />
+      <module name="jqc-gateway" target="1.8" />
+      <module name="jqc-registry" target="1.8" />
+      <module name="jqc-service" target="1.8" />
+      <module name="jqc-service-api" target="1.8" />
+      <module name="jqc-service-goods" target="1.8" />
+      <module name="jqc-service-goods-api" target="1.8" />
+      <module name="jqc-sharding-jdbc" target="1.8" />
+      <module name="jqc-web" target="1.8" />
+      <module name="snail-jqc" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jqc-common" options="-parameters" />
+      <module name="jqc-common-db" options="-parameters" />
+      <module name="jqc-registry" options="-parameters" />
+      <module name="jqc-service-goods" options="-parameters" />
+      <module name="jqc-service-goods-api" options="-parameters" />
+      <module name="jqc-sharding-jdbc" options="-parameters" />
+    </option>
+  </component>
+</project>

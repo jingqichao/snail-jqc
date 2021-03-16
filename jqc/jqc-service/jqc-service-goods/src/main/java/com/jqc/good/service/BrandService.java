@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.jqc.goods.domain.entity.BrandEntity;
 import com.jqc.goods.domain.vo.BrandVo;
 
+import java.rmi.ServerException;
 import java.util.List;
 
 /**
@@ -33,5 +34,5 @@ public interface BrandService extends IService<BrandEntity> {
      *
      * @return JSONObject
      */
-    JSONObject findAllByFreemarker();
+    JSONObject findAllByFreemarker() throws ServerException;
 }
