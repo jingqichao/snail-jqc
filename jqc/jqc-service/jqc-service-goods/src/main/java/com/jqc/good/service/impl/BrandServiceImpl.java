@@ -73,7 +73,7 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, BrandEntity> impl
     public JSONObject findAllByFreemarker() throws ServerException {
         JSONObject jsonObject = new JSONObject();
         List<BrandVo> brandVoList = this.findAll();
-        String formStr;
+        String formStr;//飒飒
         try {
             // 渲染模板
             formStr = FreeMarkerTemplateUtils.processTemplateIntoString(brandDetailsTemplate, brandVoList);
